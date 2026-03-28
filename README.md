@@ -4,13 +4,13 @@ CricketAtlas is a fully responsive, static cricket knowledge hub built with HTML
 
 ## 🌟 Features
 
-- **Well‑structured content** – 9 dedicated pages covering all major cricket topics.
-- **Dark / Light mode toggle** – Consistent across all pages, saved in local storage.
-- **Interactive mini game** – Floating button opens a bat‑and‑ball game with score tracking.
-- **Expandable sections** – Match history details are hidden until clicked.
-- **Smooth page transitions** – Subtle fade‑in animations.
-- **Responsive design** – Works seamlessly on desktop, tablet, and mobile.
-- **Fully static** – No backend or external databases; all content is embedded in HTML.
+- Structured multi-page cricket encyclopedia (9+ sections)
+- Dark / Light mode with persistent user preference
+- Interactive mini cricket game with score tracking
+- Expandable match summaries for better readability
+- Smooth animations and transitions across pages
+- Responsive design optimized for all devices
+- Fully static architecture (no backend dependencies)
 
 ## 📁 Project Structure
 
@@ -65,14 +65,14 @@ CricketAtlas/
 
 ## 📄 Content Overview
 
-- **Basics** – Rules, terminologies, and introduction.
-- **international** – Detailed explanation of Test, ODI, T20, WPL, U‑19 with winners tables (updated to 2026).
-- **domestics** – Major international events (World Cups, WTC) plus domestic leagues (IPL, BBL, PSL, etc.).
-- **Match History** – Iconic matches with expandable summaries.
-- **Players** – Detailed profiles of cricket legends including stats and timelines.
-- **History** – Visual timeline from 1844 to 2026.
-- **Records** – Batting, bowling, team records (updated to 2026).
-- **News** – Manually curated news articles from 2026.
+- **Basics** – Introduction, rules, and terminology  
+- **International Formats** – Test, ODI, T20, WPL, U-19 with winners  
+- **Domestic & Tournaments** – IPL, BBL, PSL, and global competitions  
+- **Match History** – Iconic matches with expandable insights  
+- **Players** – Profiles, stats, and achievements  
+- **History** – Timeline from 1844 to 2026  
+- **Records** – Major batting, bowling, and team milestones  
+- **News** – Curated updates up to 2026 
 
 All content is embedded directly in HTML files – no external API calls.
 
@@ -83,6 +83,10 @@ All content is embedded directly in HTML files – no external API calls.
 - Vanilla JavaScript (ES6)
 - Font Awesome icons
 - Google Fonts (Inter)
+
+## 🔗 Live Demo
+
+[View Website](https://vanshmehta6.github.io/CricketAtlas/)
 
 ## 📄 License
 
