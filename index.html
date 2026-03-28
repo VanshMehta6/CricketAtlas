@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CricketAtlas · The Ultimate Cricket Encyclopedia</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dark-mode.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <header class="sticky-header">
+    <div class="logo"><i class="fas fa-cricket"></i> CricketAtlas</div>
+    <nav class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="basics.html">Basics</a>
+      <a href="international.html">International</a>
+      <a href="domestic.html">Domestics</a>
+      <a href="match-history.html">Match History</a>
+      <a href="players.html">Players</a>
+      <a href="history.html">History</a>
+      <a href="records.html">Records</a>
+      <a href="news.html">News</a>
+    </nav>
+    <button class="dark-toggle" id="darkModeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+      <i class="fas fa-moon"></i>
+    </button>
+  </header>
+
+  <main class="main-content">
+    <section class="hero">
+      <div class="hero-content">
+        <h1>CricketAtlas</h1>
+        <p>The definitive, modern encyclopedia of cricket — from timeless Tests to T20 thrillers, legends, and records.</p>
+        <div class="hero-stats">
+          <div class="stat"><i class="fas fa-trophy"></i> 150+ domestics</div>
+          <div class="stat"><i class="fas fa-users"></i> 400+ player profiles</div>
+          <div class="stat"><i class="fas fa-chart-line"></i> Records up to 2025</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="feature-grid">
+      <div class="grid-card hover-lift" onclick="location.href='international.html'">
+        <i class="fas fa-trophy"></i>
+        <h3>Cricket international</h3>
+        <p>Test, ODI, T20, WPL, U-19 — rules, structure & winners table.</p>
+      </div>
+      <div class="grid-card hover-lift" onclick="location.href='domestic.html'">
+        <i class="fas fa-globe-asia"></i>
+        <h3>domestics</h3>
+        <p>World Cups, WTC, IPL, BBL, PSL and global competitions.</p>
+      </div>
+      <div class="grid-card hover-lift" onclick="location.href='match-history.html'">
+        <i class="fas fa-clock"></i>
+        <h3>Match History</h3>
+        <p>Iconic clashes, finals, and unforgettable moments.</p>
+      </div>
+      <div class="grid-card hover-lift" onclick="location.href='players.html'">
+        <i class="fas fa-user-graduate"></i>
+        <h3>Player Vault</h3>
+        <p>Stats, achievements, career timelines.</p>
+      </div>
+      <div class="grid-card hover-lift" onclick="location.href='records.html'">
+        <i class="fas fa-chart-bar"></i>
+        <h3>Records & Feats</h3>
+        <p>Batting, bowling, fielding milestones.</p>
+      </div>
+      <div class="grid-card hover-lift" onclick="location.href='news.html'">
+        <i class="fas fa-newspaper"></i>
+        <h3>Cricket News</h3>
+        <p>Latest updates, retirements & major announcements.</p>
+      </div>
+    </section>
+
+    <section class="spotlight">
+      <h2><i class="fas fa-fire"></i> Cricket Spotlight</h2>
+      <div class="spotlight-grid">
+        <div class="spot-card">
+          <h4>🏆 World Test Championship 2025</h4>
+          <p>South Africa defeated Australia by 5 wickets at Lord's to win their first ICC title since 1998 [international:3].</p>
+        </div>
+        <div class="spot-card">
+          <h4>🥇 Women's T20 World Cup 2024</h4>
+          <p>New Zealand won their maiden title, defeating South Africa in the final in Dubai [international:4].</p>
+        </div>
+        <div class="spot-card">
+          <h4>📈 Most ODI runs</h4>
+          <p>Sachin Tendulkar holds the record with 18,426 runs; Virat Kohli second with 13,906+ [international:1].</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 CricketAtlas — The Complete Cricket Encyclopedia. All data verified and up-to-date.</p>
+  </footer>
+
+  <div id="gameFloatingBtn" class="floating-game-btn">
+    <i class="fas fa-gamepad"></i> <span>Play Cricket Dash</span>
+  </div>
+
+  <script src="js/darkmode.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/game.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

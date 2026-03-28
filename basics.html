@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CricketAtlas · Basics</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dark-mode.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <header class="sticky-header">
+    <div class="logo"><i class="fas fa-cricket"></i> CricketAtlas</div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="basics.html" class="active">Basics</a>
+      <a href="international.html">International</a>
+      <a href="domestic.html">Domestics</a>
+      <a href="match-history.html">Match History</a>
+      <a href="players.html">Players</a>
+      <a href="history.html">History</a>
+      <a href="records.html">Records</a>
+      <a href="news.html">News</a>
+    </nav>
+    <button class="dark-toggle" id="darkModeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+      <i class="fas fa-moon"></i>
+    </button>
+  </header>
+
+  <main class="main-content">
+    <h1 class="page-title"><i class="fas fa-book-open"></i> Cricket Basics</h1>
+    
+    <div class="content-card">
+      <h2>What is Cricket?</h2>
+      <p>Cricket is a bat-and-ball game played between two teams of 11 players on a circular field with a 22-yard pitch in the center. Originating in England in the 16th century, it is now the second-most popular sport globally with over 2.5 billion fans.</p>
+    </div>
+
+    <div class="content-card">
+      <h2>Key Rules & Gameplay</h2>
+      <ul>
+        <li><strong>Overs:</strong> Each over consists of 6 legal deliveries. Limited-overs cricket has a set number of overs per innings (20, 50, etc.).</li>
+        <li><strong>Ways to Score:</strong> Running between wickets (1-3 runs), boundaries (4 runs if ball touches ground, 6 if cleared without bouncing), extras (no balls, wides, byes, leg byes).</li>
+        <li><strong>Ways to Get Out:</strong> Bowled, caught, LBW (leg before wicket), run out, stumped, hit wicket, handled the ball (rare), obstructing the field, timed out.</li>
+        <li><strong>Umpires:</strong> Two on-field umpires make decisions, with a third umpire (TV umpire) for close calls and reviews.</li>
+        <li><strong>DRS:</strong> Decision Review System allows each team to challenge umpire decisions, using ball-tracking and ultra-edge technology.</li>
+      </ul>
+    </div>
+
+    <div class="content-card">
+      <h2>Cricket international Explained</h2>
+      <ul>
+        <li><strong>Test Cricket:</strong> The oldest format, played over 5 days with unlimited overs. Teams bat twice each.</li>
+        <li><strong>ODI (One Day International):</strong> 50 overs per side. World Cup held every 4 years since 1975.</li>
+        <li><strong>T20I (Twenty20 International):</strong> 20 overs per side. Fastest and most explosive format, introduced in 2005.</li>
+      </ul>
+    </div>
+
+    <div class="content-card">
+      <h2>Common Terminologies</h2>
+      <div class="term-grid">
+        <span><i class="fas fa-baseball-ball"></i> Yorker</span>
+        <span><i class="fas fa-chart-line"></i> Googly</span>
+        <span><i class="fas fa-chart-simple"></i> Powerplay</span>
+        <span><i class="fas fa-tachometer-alt"></i> Duck</span>
+        <span><i class="fas fa-medal"></i> Century</span>
+        <span><i class="fas fa-chart-pie"></i> Hat-trick</span>
+        <span><i class="fas fa-bolt"></i> Maiden Over</span>
+        <span><i class="fas fa-shield-alt"></i> LBW</span>
+        <span><i class="fas fa-running"></i> Run Rate</span>
+        <span><i class="fas fa-crown"></i> Golden Duck</span>
+        <span><i class="fas fa-chart-line"></i> Economy Rate</span>
+        <span><i class="fas fa-flag"></i> Declaration</span>
+      </div>
+    </div>
+
+    <div class="content-card">
+      <h2>Famous Cricket Grounds</h2>
+      <ul>
+        <li><strong>Lord's Cricket Ground, London</strong> — "The Home of Cricket" since 1814</li>
+        <li><strong>Melbourne Cricket Ground (MCG)</strong> — Capacity 100,000, hosted 1992 World Cup final</li>
+        <li><strong>Eden Gardens, Kolkata</strong> — India's oldest and largest stadium</li>
+        <li><strong>Sydney Cricket Ground (SCG)</strong> — Known for its iconic Members Pavilion</li>
+        <li><strong>Narendra Modi Stadium, Ahmedabad</strong> — World's largest cricket stadium (132,000 capacity)</li>
+      </ul>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 CricketAtlas — The Complete Cricket Encyclopedia.</p>
+  </footer>
+
+  <div id="gameFloatingBtn" class="floating-game-btn">
+    <i class="fas fa-gamepad"></i> <span>Play Cricket Dash</span>
+  </div>
+
+  <script src="js/darkmode.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/game.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

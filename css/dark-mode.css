@@ -1,0 +1,11 @@
+body.dark {
+  --bg: #0a0c10;
+  --surface: #1a1e24;
+  --text: #e2e8f0;
+  --text-light: #cbd5e1;
+  --border: #2d3748;
+}
+
+body.dark .stats-table th {
+  background: #1a1e24;
+}

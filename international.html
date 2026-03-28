@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CricketAtlas · International Cricket</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dark-mode.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <style>
+    .tab-container { margin: 2rem 0; }
+    .tab-buttons { display: flex; flex-wrap: wrap; gap: 0.5rem; border-bottom: 2px solid var(--border); margin-bottom: 1.5rem; }
+    .tab-btn { background: none; border: none; padding: 0.75rem 1.5rem; font-size: 1rem; font-weight: 600; cursor: pointer; color: var(--text-light); transition: all 0.2s; border-radius: 8px 8px 0 0; }
+    .tab-btn:hover { color: var(--primary); background: var(--bg); }
+    .tab-btn.active { color: var(--primary); border-bottom: 3px solid var(--primary); background: var(--bg); }
+    .tab-pane { display: none; animation: fadeInUp 0.3s ease; }
+    .tab-pane.active { display: block; }
+    .tournament-badge { display: inline-block; background: var(--primary); color: white; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.8rem; margin-bottom: 1rem; }
+    .match-result { background: var(--bg); padding: 0.5rem; border-radius: 8px; margin: 0.25rem 0; }
+  </style>
+</head>
+<body>
+  <header class="sticky-header">
+    <div class="logo"><i class="fas fa-cricket"></i> CricketAtlas</div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="basics.html">Basics</a>
+      <a href="international.html" class="active">International</a>
+      <a href="domestic.html">Domestic</a>
+      <a href="match-history.html">Match History</a>
+      <a href="players.html">Players</a>
+      <a href="history.html">History</a>
+      <a href="records.html">Records</a>
+      <a href="news.html">News</a>
+    </nav>
+    <button class="dark-toggle" id="darkModeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+      <i class="fas fa-moon"></i>
+    </button>
+  </header>
+
+  <main class="main-content">
+    <h1 class="page-title"><i class="fas fa-globe-asia"></i> International Cricket</h1>
+
+    <div class="tab-container">
+      <div class="tab-buttons">
+        <button class="tab-btn active" data-tab="men-odi">🏆 Men's ODI WC</button>
+        <button class="tab-btn" data-tab="men-t20">⚡ Men's T20 WC</button>
+        <button class="tab-btn" data-tab="wtc">🏅 World Test Champ</button>
+        <button class="tab-btn" data-tab="champions">🏆 Champions Trophy</button>
+        <button class="tab-btn" data-tab="asia-cup">🌏 Asia Cup</button>
+        <button class="tab-btn" data-tab="asian-games">🏅 Asian Games</button>
+        <button class="tab-btn" data-tab="bilateral">🤝 Bilateral Trophies</button>
+        <button class="tab-btn" data-tab="women-odi">👩 Women's ODI WC</button>
+        <button class="tab-btn" data-tab="women-t20">👩 Women's T20 WC</button>
+        <button class="tab-btn" data-tab="u19-men">⭐ U19 Men's WC</button>
+      </div>
+
+      <!-- Men's ODI World Cup (unchanged) -->
+      <div class="tab-pane active" id="men-odi">
+        <div class="tournament-card">
+          <span class="tournament-badge"><i class="fas fa-calendar-alt"></i> 1975 – 2023</span>
+          <h2>ICC Men's Cricket World Cup (ODI)</h2>
+          <table class="stats-table"><thead><tr><th>Year</th><th>Winner</th><th>Runner-up</th><th>Player of the Match (Final)</th><th>Player of the Tournament</th></tr></thead>
+          <tbody><tr><td>1975</td><td>West Indies</td><td>Australia</td><td>Clive Lloyd (102)</td><td>-</td></tr><tr><td>1979</td><td>West Indies</td><td>England</td><td>Viv Richards (138*)</td><td>-</td></tr><tr><td>1983</td><td>India</td><td>West Indies</td><td>Mohinder Amarnath (3/12, 26)</td><td>-</td></tr><tr><td>1987</td><td>Australia</td><td>England</td><td>David Boon (75)</td><td>-</td></tr><tr><td>1992</td><td>Pakistan</td><td>England</td><td>Wasim Akram (3/49, 33)</td><td>Martin Crowe</td></tr><tr><td>1996</td><td>Sri Lanka</td><td>Australia</td><td>Aravinda de Silva (107*, 3/42)</td><td>Sanath Jayasuriya</td></tr><tr><td>1999</td><td>Australia</td><td>Pakistan</td><td>Shane Warne (4/33)</td><td>Lance Klusener</td></tr><tr><td>2003</td><td>Australia</td><td>India</td><td>Ricky Ponting (140*)</td><td>Sachin Tendulkar</td></tr><tr><td>2007</td><td>Australia</td><td>Sri Lanka</td><td>Adam Gilchrist (149)</td><td>Glenn McGrath</td></tr><tr><td>2011</td><td>India</td><td>Sri Lanka</td><td>MS Dhoni (91*)</td><td>Yuvraj Singh</td></tr><tr><td>2015</td><td>Australia</td><td>New Zealand</td><td>James Faulkner (3/36)</td><td>Mitchell Starc</td></tr><tr><td>2019</td><td>England</td><td>New Zealand</td><td>Ben Stokes (84*)</td><td>Kane Williamson</td></tr><tr><td>2023</td><td>Australia</td><td>India</td><td>Travis Head (137)</td><td>Virat Kohli</td></tr></tbody></table>
+        </div>
+      </div>
+
+      <!-- Men's T20 World Cup (updated with 2026) -->
+      <div class="tab-pane" id="men-t20">
+        <div class="tournament-card">
+          <span class="tournament-badge"><i class="fas fa-calendar-alt"></i> 2007 – 2026</span>
+          <h2>ICC Men's T20 World Cup</h2>
+          <table class="stats-table"><thead><tr><th>Year</th><th>Winner</th><th>Runner-up</th><th>Player of the Match (Final)</th><th>Player of the Tournament</th></tr></thead>
+          <tbody><tr><td>2007</td><td>India</td><td>Pakistan</td><td>Irfan Pathan (3/16)</td><td>Shahid Afridi</td></tr><tr><td>2009</td><td>Pakistan</td><td>Sri Lanka</td><td>Shahid Afridi (54*, 1/20)</td><td>Tillakaratne Dilshan</td></tr><tr><td>2010</td><td>England</td><td>Australia</td><td>Craig Kieswetter (63)</td><td>Kevin Pietersen</td></tr><tr><td>2012</td><td>West Indies</td><td>Sri Lanka</td><td>Marlon Samuels (78)</td><td>Shane Watson</td></tr><tr><td>2014</td><td>Sri Lanka</td><td>India</td><td>Kumar Sangakkara (52*)</td><td>Virat Kohli</td></tr><tr><td>2016</td><td>West Indies</td><td>England</td><td>Carlos Brathwaite (34* off 10)</td><td>Virat Kohli</td></tr><tr><td>2021</td><td>Australia</td><td>New Zealand</td><td>Mitchell Marsh (77*)</td><td>David Warner</td></tr><tr><td>2022</td><td>England</td><td>Pakistan</td><td>Sam Curran (3/12)</td><td>Sam Curran</td></tr><tr><td>2024</td><td>India</td><td>South Africa</td><td>Virat Kohli (76)</td><td>Jasprit Bumrah</td></tr><tr><td>2026</td><td>India</td><td>New Zealand</td><td>Rohit Sharma (112*)</td><td>Hardik Pandya</td></tr></tbody></table>
+          <div class="match-result"><strong>🏆 2026 Final (Mar 8):</strong> India 255/5 beat New Zealand 159 by 96 runs – Rohit Sharma's century led India to a third title [internationalional:9].</div>
+        </div>
+      </div>
+
+      <!-- World Test Championship -->
+      <div class="tab-pane" id="wtc">
+        <div class="tournament-card">
+          <span class="tournament-badge"><i class="fas fa-calendar-alt"></i> 2021 – 2025</span>
+          <h2>ICC World Test Championship</h2>
+          <table class="stats-table"><thead><tr><th>Cycle</th><th>Final Year</th><th>Winner</th><th>Runner-up</th><th>Player of the Match (Final)</th></tr></thead>
+          <tbody><tr><td>2019-2021</td><td>2021</td><td>New Zealand</td><td>India</td><td>Kyle Jamieson (5/31 & 2/30)</td></tr><tr><td>2021-2023</td><td>2023</td><td>Australia</td><td>India</td><td>Travis Head (163 & 18)</td></tr><tr><td>2023-2025</td><td>2025</td><td>South Africa</td><td>Australia</td><td>Aiden Markram (136 & 6)</td></tr></tbody></table>
+        </div>
+      </div>
+
+      <!-- ICC Champions Trophy (full list) -->
+      <div class="tab-pane" id="champions">
+        <div class="tournament-card">
+          <span class="tournament-badge"><i class="fas fa-calendar-alt"></i> 1998 – 2025</span>
+          <h2>ICC Champions Trophy</h2>
+          <table class="stats-table"><thead><tr><th>Year</th><th>Winner</th><th>Runner-up</th><th>Player of the Match (Final)</th></tr></thead>
+          <tbody>
+            <tr><td>1998</td><td>South Africa</td><td>West Indies</td><td>Jacques Kallis (3/21, 44*)</td></tr>
+            <tr><td>2000</td><td>New Zealand</td><td>India</td><td>Chris Cairns (102*)</td></tr>
+            <tr><td>2002</td><td>India & Sri Lanka (shared)</td><td>-</td><td>-</td></tr>
+            <tr><td>2004</td><td>West Indies</td><td>England</td><td>Ian Bradshaw (3/27, 34*)</td></tr>
+            <tr><td>2006</td><td>Australia</td><td>West Indies</td><td>Shane Watson (57*)</td></tr>
+            <tr><td>2009</td><td>Australia</td><td>New Zealand</td><td>Shane Watson (105)</td></tr>
+            <tr><td>2013</td><td>India</td><td>England</td><td>Ravindra Jadeja (2/24, 33*)</td></tr>
+            <tr><td>2017</td><td>Pakistan</td><td>India</td><td>Fakhar Zaman (114)</td></tr>
+            <tr><td>2025</td><td>India</td><td>New Zealand</td><td>Rohit Sharma (76) [international:1][international:9]</td></tr>
+          </tbody></table>
+          <div class="match-result"><strong>🏆 2025 Final:</strong> India beat New Zealand by 4 wickets in Dubai to win their third Champions Trophy [international:1].</div>
+        </div>
+      </div>
+
+      <!-- Asia Cup (Men) -->
+      <div class="tab-pane" id="asia-cup">
+        <div class="tournament-card">
+          <span class="tournament-badge"><i class="fas fa-calendar-alt"></i> 1984 – 2025</span>
+          <h2>Asia Cup (Men)</h2>
+          <table class="stats-table"><thead><tr><th>Year</th><th>Winner</th><th>Runner-up</th><th>Format</th></tr></thead>
+          <tbody>
+            <tr><td>1984</td><td>India</td><td>Sri Lanka</td><td>ODI</td></tr><tr><td>1986</td><td>Sri Lanka</td><td>Pakistan</td><td>ODI</td></tr><tr><td>1988</td><td>India</td><td>Sri Lanka</td><td>ODI</td></tr><tr><td>1990-91</td><td>India</td><td>Sri Lanka</td><td>ODI</td></tr><tr><td>1995</td><td>India</td><td>Sri Lanka</td><td>ODI</td></tr><tr><td>1997</td><td>Sri Lanka</td><td>India</td><td>ODI</td></tr><tr><td>2000</td><td>Pakistan</td><td>Sri Lanka</td><td>ODI</td></tr><tr><td>2004</td><td>Sri Lanka</td><td>India</td><td>ODI</td></tr><tr><td>2008</td><td>Sri Lanka</td><td>India</td><td>ODI</td></tr><tr><td>2010</td><td>India</td><td>Sri Lanka</td><td>ODI</td></tr><tr><td>2012</td><td>Pakistan</td><td>Bangladesh</td><td>ODI</td></tr><tr><td>2014</td><td>Sri Lanka</td><td>Pakistan</td><td>ODI</td></tr><tr><td>2016</td><td>India</td><td>Bangladesh</td><td>T20I</td></tr><tr><td>2018</td><td>India</td><td>Bangladesh</td><td>ODI</td></tr><tr><td>2022</td><td>Sri Lanka</td><td>Pakistan</td><td>T20I</td></tr><tr><td>2023</td><td>India</td><td>Sri Lanka</td><td>ODI</td></tr><tr><td>2025</td><td>Sri Lanka</td><td>India</td><td>T20I [international:3]</td></tr>
+          </tbody></table>
+          <div class="match-result"><strong>🏆 Most titles:</strong> India (8), Sri Lanka (6), Pakistan (2) [international:3].</div>
+        </div>
+      </div>
+
+      <!-- Asian Games -->
+      <div class="tab-pane" id="asian-games">
+        <div class="tournament-card">
+          <span class="tournament-badge"><i class="fas fa-calendar-alt"></i> 2010, 2014, 2023</span>
+          <h2>Cricket at the Asian Games</h2>
+          <h3>Men's T20</h3>
+          <table class="stats-table"><thead><tr><th>Year</th><th>Gold</th><th>Silver</th><th>Bronze</th></tr></thead>
+          <tbody>
+            <tr><td>2010</td><td>Bangladesh</td><td>Afghanistan</td><td>Pakistan</td></tr>
+            <tr><td>2014</td><td>Sri Lanka</td><td>Afghanistan</td><td>Bangladesh</td></tr>
+            <tr><td>2023</td><td>India</td><td>Afghanistan</td><td>Bangladesh [international:5]</td></tr>
+          </tbody></table>
+          <h3>Women's T20</h3>
+          <table class="stats-table"><thead><tr><th>Year</th><th>Gold</th><th>Silver</th><th>Bronze</th></tr></thead>
+          <tbody>
+            <tr><td>2014</td><td>Pakistan</td><td>Bangladesh</td><td>Sri Lanka</td></tr>
+            <tr><td>2023</td><td>India</td><td>Sri Lanka</td><td>Bangladesh</td></tr>
+          </tbody></table>
+        </div>
+      </div>
+
+      <!-- Bilateral Trophies -->
+      <div class="tab-pane" id="bilateral">
+        <div class="tournament-card">
+          <h2>Major Bilateral Test Trophies</h2>
+          <h3>🏆 Border-Gavaskar Trophy (India vs Australia)</h3>
+          <table class="stats-table"><thead><tr><th>Series</th><th>Winner</th><th>Margin</th></tr></thead>
+          <tbody>
+            <tr><td>2024-25</td><td>Australia</td><td>3-1 [international:6]</td></tr>
+            <tr><td>2023</td><td>India</td><td>2-1</td></tr>
+            <tr><td>2020-21</td><td>India</td><td>2-1</td></tr>
+            <tr><td>2018-19</td><td>India</td><td>2-1</td></tr>
+          </tbody></table>
+          <div class="match-result"><strong>📊 Overall:</strong> India have won 10 series, Australia 6, one draw [international:6].</div>
+
+          <h3>🏏 The Ashes (England vs Australia)</h3>
+          <table class="stats-table"><thead><tr><th>Year</th><th>Winner</th><th>Margin</th><th>Host</th></tr></thead>
+          <tbody>
+            <tr><td>2023</td><td>Drawn</td><td>2-2</td><td>England [international:7]</td></tr>
+            <tr><td>2021-22</td><td>Australia</td><td>4-0</td><td>Australia</td></tr>
+            <tr><td>2019</td><td>Drawn</td><td>2-2</td><td>England</td></tr>
+            <tr><td>2017-18</td><td>Australia</td><td>4-0</td><td>Australia</td></tr>
+          </tbody></table>
+          <div class="match-result"><strong>🏆 Most wins:</strong> Australia 34, England 32 [international:7].</div>
+        </div>
+      </div>
+
+      <!-- Women's ODI World Cup -->
+      <div class="tab-pane" id="women-odi">
+        <div class="tournament-card">
+          <span class="tournament-badge"><i class="fas fa-calendar-alt"></i> 1973 – 2025</span>
+          <h2>ICC Women's Cricket World Cup (ODI)</h2>
+          <table class="stats-table"><thead><tr><th>Year</th><th>Winner</th><th>Runner-up</th><th>Winning Captain</th></tr></thead>
+          <tbody>
+            <tr><td>1973</td><td>England</td><td>Australia</td><td>Rachael Heyhoe Flint</td></tr>
+            <tr><td>1978</td><td>Australia</td><td>England</td><td>Margaret Jennings</td></tr>
+            <tr><td>1982</td><td>Australia</td><td>England</td><td>Sharon Tredrea</td></tr>
+            <tr><td>1988</td><td>Australia</td><td>England</td><td>Sharon Tredrea</td></tr>
+            <tr><td>1993</td><td>England</td><td>New Zealand</td><td>Karen Smithies</td></tr>
+            <tr><td>1997</td><td>Australia</td><td>New Zealand</td><td>Belinda Clark</td></tr>
+            <tr><td>2000</td><td>New Zealand</td><td>Australia</td><td>Emily Drumm</td></tr>
+            <tr><td>2005</td><td>Australia</td><td>India</td><td>Belinda Clark</td></tr>
+            <tr><td>2009</td><td>England</td><td>New Zealand</td><td>Charlotte Edwards</td></tr>
+            <tr><td>2013</td><td>Australia</td><td>West Indies</td><td>Jodie Fields</td></tr>
+            <tr><td>2017</td><td>England</td><td>India</td><td>Heather Knight</td></tr>
+            <tr><td>2022</td><td>Australia</td><td>England</td><td>Meg Lanning</td></tr>
+            <tr><td>2025</td><td>India</td><td>South Africa</td><td>Harmanpreet Kaur [international:9]</td></tr>
+          </tbody></table>
+        </div>
+      </div>
+
+      <!-- Women's T20 World Cup -->
+      <div class="tab-pane" id="women-t20">
+        <div class="tournament-card">
+          <span class="tournament-badge"><i class="fas fa-calendar-alt"></i> 2009 – 2024</span>
+          <h2>ICC Women's T20 World Cup</h2>
+          <table class="stats-table"><thead><tr><th>Year</th><th>Winner</th><th>Runner-up</th><th>Player of the Match (Final)</th><th>Player of the Tournament</th></tr></thead>
+          <tbody>
+            <tr><td>2009</td><td>England</td><td>New Zealand</td><td>Katherine Brunt (3/6)</td><td>Claire Taylor</td></tr>
+            <tr><td>2010</td><td>Australia</td><td>New Zealand</td><td>Ellyse Perry (3/18)</td><td>-</td></tr>
+            <tr><td>2012</td><td>Australia</td><td>England</td><td>Jess Cameron (45)</td><td>-</td></tr>
+            <tr><td>2014</td><td>Australia</td><td>England</td><td>Sarah Coyte (3/16)</td><td>Meg Lanning</td></tr>
+            <tr><td>2016</td><td>West Indies</td><td>Australia</td><td>Hayley Matthews (66)</td><td>Stafanie Taylor</td></tr>
+            <tr><td>2018</td><td>Australia</td><td>England</td><td>Ashleigh Gardner (3/22, 33)</td><td>Alyssa Healy</td></tr>
+            <tr><td>2020</td><td>Australia</td><td>India</td><td>Alyssa Healy (75)</td><td>Beth Mooney</td></tr>
+            <tr><td>2023</td><td>Australia</td><td>South Africa</td><td>Beth Mooney (74*)</td><td>Ashleigh Gardner</td></tr>
+            <tr><td>2024</td><td>New Zealand</td><td>South Africa</td><td>Amelia Kerr (43, 3/24)</td><td>Amelia Kerr</td></tr>
+          </tbody></table>
+        </div>
+      </div>
+
+      <!-- U19 Men's World Cup (updated 2026) -->
+      <div class="tab-pane" id="u19-men">
+        <div class="tournament-card">
+          <span class="tournament-badge"><i class="fas fa-calendar-alt"></i> 1988 – 2026</span>
+          <h2>ICC U19 Men's Cricket World Cup</h2>
+          <table class="stats-table"><thead><tr><th>Year</th><th>Winner</th><th>Runner-up</th><th>Player of the Match (Final)</th></tr></thead>
+          <tbody>
+            <tr><td>1988</td><td>Australia</td><td>Pakistan</td><td>-</td></tr>
+            <tr><td>1998</td><td>England</td><td>New Zealand</td><td>-</td></tr>
+            <tr><td>2000</td><td>India</td><td>Sri Lanka</td><td>-</td></tr>
+            <tr><td>2002</td><td>Australia</td><td>South Africa</td><td>-</td></tr>
+            <tr><td>2004</td><td>Pakistan</td><td>West Indies</td><td>-</td></tr>
+            <tr><td>2006</td><td>Pakistan</td><td>India</td><td>-</td></tr>
+            <tr><td>2008</td><td>India</td><td>South Africa</td><td>-</td></tr>
+            <tr><td>2010</td><td>Australia</td><td>Pakistan</td><td>-</td></tr>
+            <tr><td>2012</td><td>India</td><td>Australia</td><td>Unmukt Chand</td></tr>
+            <tr><td>2014</td><td>South Africa</td><td>Pakistan</td><td>-</td></tr>
+            <tr><td>2016</td><td>West Indies</td><td>India</td><td>Keemo Paul</td></tr>
+            <tr><td>2018</td><td>India</td><td>Australia</td><td>Manjot Kalra</td></tr>
+            <tr><td>2020</td><td>Bangladesh</td><td>India</td><td>Akbar Ali</td></tr>
+            <tr><td>2022</td><td>India</td><td>England</td><td>Raj Bawa</td></tr>
+            <tr><td>2024</td><td>Australia</td><td>India</td><td>Mahli Beardman</td></tr>
+            <tr><td>2026</td><td>India</td><td>England</td><td>Vaibhav Sooryavanshi (175) [international:8]</td></tr>
+          </tbody></table>
+          <div class="match-result"><strong>🏆 2026 Final:</strong> India beat England by 100 runs – Vaibhav Sooryavanshi smashed 175 off 80 balls [international:8].</div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 CricketAtlas — Verified international cricket data.</p>
+  </footer>
+
+  <div id="gameFloatingBtn" class="floating-game-btn"><i class="fas fa-gamepad"></i> <span>Play Cricket Dash</span></div>
+
+  <script>
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const tabId = btn.getAttribute('data-tab');
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
+        btn.classList.add('active');
+        document.getElementById(tabId).classList.add('active');
+      });
+    });
+  </script>
+  <script src="js/darkmode.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/game.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

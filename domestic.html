@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CricketAtlas · Domestic Leagues</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dark-mode.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <style>
+    .tab-container { margin: 2rem 0; }
+    .tab-buttons { display: flex; flex-wrap: wrap; gap: 0.5rem; border-bottom: 2px solid var(--border); margin-bottom: 1.5rem; }
+    .tab-btn { background: none; border: none; padding: 0.75rem 1.5rem; font-size: 1rem; font-weight: 600; cursor: pointer; color: var(--text-light); transition: all 0.2s; border-radius: 8px 8px 0 0; }
+    .tab-btn:hover { color: var(--primary); background: var(--bg); }
+    .tab-btn.active { color: var(--primary); border-bottom: 3px solid var(--primary); background: var(--bg); }
+    .tab-pane { display: none; animation: fadeInUp 0.3s ease; }
+    .tab-pane.active { display: block; }
+    .league-summary { margin-top: 1rem; background: var(--bg); padding: 1rem; border-radius: 12px; border-left: 4px solid var(--primary); }
+  </style>
+</head>
+<body>
+  <header class="sticky-header">
+    <div class="logo"><i class="fas fa-cricket"></i> CricketAtlas</div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="basics.html">Basics</a>
+      <a href="international.html">International</a>
+      <a href="domestic.html" class="active">Domestic</a>
+      <a href="match-history.html">Match History</a>
+      <a href="players.html">Players</a>
+      <a href="history.html">History</a>
+      <a href="records.html">Records</a>
+      <a href="news.html">News</a>
+    </nav>
+    <button class="dark-toggle" id="darkModeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+      <i class="fas fa-moon"></i>
+    </button>
+  </header>
+
+  <main class="main-content">
+    <h1 class="page-title"><i class="fas fa-building"></i> Domestic & Franchise Leagues</h1>
+
+    <div class="tab-container">
+      <div class="tab-buttons">
+        <button class="tab-btn active" data-tab="ipl">🇮🇳 IPL</button>
+        <button class="tab-btn" data-tab="bbl">🇦🇺 BBL</button>
+        <button class="tab-btn" data-tab="psl">🇵🇰 PSL</button>
+        <button class="tab-btn" data-tab="hundred">🏴󠁧󠁢󠁥󠁮󠁧󠁿 The Hundred</button>
+        <button class="tab-btn" data-tab="cpl">🏝️ CPL</button>
+        <button class="tab-btn" data-tab="sa20">🇿🇦 SA20</button>
+        <button class="tab-btn" data-tab="wpl">👩 WPL</button>
+        <button class="tab-btn" data-tab="mlc">🇺🇸 MLC</button>
+        <button class="tab-btn" data-tab="bpl">🇧🇩 BPL</button>
+        <button class="tab-btn" data-tab="ilt20">🇦🇪 ILT20</button>
+        <button class="tab-btn" data-tab="supersmash">🇳🇿 Super Smash</button>
+        <button class="tab-btn" data-tab="county">🏴󠁧󠁢󠁥󠁮󠁧󠁿 County Champ</button>
+      </div>
+
+      <!-- IPL -->
+      <div class="tab-pane active" id="ipl">
+        <div class="tournament-card">
+          <h2>Indian Premier League (IPL)</h2>
+          <table class="stats-table"><thead>叭<th>Year</th><th>Winner</th><th>Runner-up</th><th>Player of the Match (Final)</th> </thead>
+          <tbody>
+            <tr><td>2008</td><td>Rajasthan Royals</td><td>Chennai Super Kings</td><td>Yusuf Pathan (56*)</td></tr>
+            <tr><td>2009</td><td>Deccan Chargers</td><td>Royal Challengers Bangalore</td><td>Anil Kumble (4/16)</td></tr>
+            <tr><td>2010</td><td>Chennai Super Kings</td><td>Mumbai Indians</td><td>MS Dhoni (22*, 2 catches)</td></tr>
+            <tr><td>2011</td><td>Chennai Super Kings</td><td>Royal Challengers Bangalore</td><td>Murali Vijay (95)</td></tr>
+            <tr><td>2012</td><td>Kolkata Knight Riders</td><td>Chennai Super Kings</td><td>Manvinder Bisla (89)</td></tr>
+            <tr><td>2013</td><td>Mumbai Indians</td><td>Chennai Super Kings</td><td>Kieron Pollard (60*, 2/27)</td></tr>
+            <tr><td>2014</td><td>Kolkata Knight Riders</td><td>Kings XI Punjab</td><td>Manish Pandey (94)</td></tr>
+            <tr><td>2015</td><td>Mumbai Indians</td><td>Chennai Super Kings</td><td>Rohit Sharma (50*)</td></tr>
+            <tr><td>2016</td><td>Sunrisers Hyderabad</td><td>Royal Challengers Bangalore</td><td>Ben Cutting (39*, 2/35)</td></tr>
+            <tr><td>2017</td><td>Mumbai Indians</td><td>Rising Pune Supergiant</td><td>Krunal Pandya (47)</td></tr>
+            <tr><td>2018</td><td>Chennai Super Kings</td><td>Sunrisers Hyderabad</td><td>Shane Watson (117*)</td></tr>
+            <tr><td>2019</td><td>Mumbai Indians</td><td>Chennai Super Kings</td><td>Jasprit Bumrah (2/14)</td></tr>
+            <tr><td>2020</td><td>Mumbai Indians</td><td>Delhi Capitals</td><td>Trent Boult (3/30)</td></tr>
+            <tr><td>2021</td><td>Chennai Super Kings</td><td>Kolkata Knight Riders</td><td>Faf du Plessis (86)</td></tr>
+            <tr><td>2022</td><td>Gujarat Titans</td><td>Rajasthan Royals</td><td>Hardik Pandya (34, 3/17)</td></tr>
+            <tr><td>2023</td><td>Chennai Super Kings</td><td>Gujarat Titans</td><td>Devon Conway (47, 2 catches)</td></tr>
+            <tr><td>2024</td><td>Kolkata Knight Riders</td><td>Sunrisers Hyderabad</td><td>Andre Russell (2/19, 8* off 3)</td></tr>
+            <tr><td>2025</td><td>Royal Challengers Bengaluru</td><td>Punjab Kings</td><td>Virat Kohli (78*)</td></tr>
+          </tbody></table>
+          <div class="match-highlight"><strong>🏆 Most titles:</strong> Mumbai Indians & Chennai Super Kings (5 each).</div>
+        </div>
+      </div>
+
+      <!-- BBL -->
+      <div class="tab-pane" id="bbl">
+        <div class="tournament-card">
+          <h2>Big Bash League (BBL)</h2>
+          <table class="stats-table"><thead>叭<th>Season</th><th>Winner</th><th>Runner-up</th><th>Player of the Match (Final)</th> </thead>
+          <tbody>
+            <tr><td>2011-12</td><td>Sydney Sixers</td><td>Perth Scorchers</td><td>Moises Henriques (3/23, 24*)</td></tr>
+            <tr><td>2012-13</td><td>Brisbane Heat</td><td>Perth Scorchers</td><td>Nathan Hauritz (2/17)</td></tr>
+            <tr><td>2013-14</td><td>Perth Scorchers</td><td>Hobart Hurricanes</td><td>Brad Hogg (3/31)</td></tr>
+            <tr><td>2014-15</td><td>Perth Scorchers</td><td>Sydney Sixers</td><td>Shaun Marsh (73)</td></tr>
+            <tr><td>2015-16</td><td>Sydney Thunder</td><td>Melbourne Stars</td><td>Usman Khawaja (70)</td></tr>
+            <tr><td>2016-17</td><td>Perth Scorchers</td><td>Sydney Sixers</td><td>Jhye Richardson (3/16)</td></tr>
+            <tr><td>2017-18</td><td>Adelaide Strikers</td><td>Hobart Hurricanes</td><td>Jake Weatherald (115)</td></tr>
+            <tr><td>2018-19</td><td>Melbourne Renegades</td><td>Melbourne Stars</td><td>Dan Christian (3/16, 18*)</td></tr>
+            <tr><td>2019-20</td><td>Sydney Sixers</td><td>Melbourne Stars</td><td>Josh Philippe (52*)</td></tr>
+            <tr><td>2020-21</td><td>Sydney Sixers</td><td>Perth Scorchers</td><td>James Vince (95)</td></tr>
+            <tr><td>2021-22</td><td>Perth Scorchers</td><td>Sydney Sixers</td><td>Laurie Evans (76*)</td></tr>
+            <tr><td>2022-23</td><td>Perth Scorchers</td><td>Brisbane Heat</td><td>Ashton Turner (53)</td></tr>
+            <tr><td>2023-24</td><td>Brisbane Heat</td><td>Sydney Sixers</td><td>Spencer Johnson (4/26)</td></tr>
+            <tr><td>2024-25</td><td>Hobart Hurricanes</td><td>Sydney Thunder</td><td>Mitchell Owen (108)</td></tr>
+            <tr><td>2025-26</td><td>Perth Scorchers</td><td>Sydney Sixers</td><td>David Payne (3/23)</td></tr>
+          </tbody></table>
+        </div>
+      </div>
+
+      <!-- PSL -->
+      <div class="tab-pane" id="psl">
+        <div class="tournament-card">
+          <h2>Pakistan Super League (PSL)</h2>
+          <table class="stats-table"><thead>叭<th>Year</th><th>Winner</th><th>Runner-up</th><th>Player of the Match (Final)</th> </thead>
+          <tbody>
+            <tr><td>2016</td><td>Islamabad United</td><td>Quetta Gladiators</td><td>Dwayne Smith (73)</td></tr>
+            <tr><td>2017</td><td>Peshawar Zalmi</td><td>Quetta Gladiators</td><td>Darren Sammy (3/24, 38*)</td></tr>
+            <tr><td>2018</td><td>Islamabad United</td><td>Peshawar Zalmi</td><td>Luke Ronchi (52*)</td></tr>
+            <tr><td>2019</td><td>Quetta Gladiators</td><td>Peshawar Zalmi</td><td>Mohammad Hasanain (3/30)</td></tr>
+            <tr><td>2020</td><td>Karachi Kings</td><td>Lahore Qalandars</td><td>Babar Azam (63*)</td></tr>
+            <tr><td>2021</td><td>Multan Sultans</td><td>Peshawar Zalmi</td><td>Sohaib Maqsood (65*)</td></tr>
+            <tr><td>2022</td><td>Lahore Qalandars</td><td>Multan Sultans</td><td>Mohammad Hafeez (69)</td></tr>
+            <tr><td>2023</td><td>Lahore Qalandars</td><td>Multan Sultans</td><td>Shaheen Shah Afridi (4/51, 1 catch)</td></tr>
+            <tr><td>2024</td><td>Islamabad United</td><td>Multan Sultans</td><td>Imad Wasim (3/12, 19*)</td></tr>
+            <tr><td>2025</td><td>Lahore Qalandars</td><td>Quetta Gladiators</td><td>Kusal Perera (74)</td></tr>
+          </tbody></table>
+        </div>
+      </div>
+
+      <!-- The Hundred -->
+      <div class="tab-pane" id="hundred">
+        <div class="tournament-card">
+          <h2>The Hundred (Men's)</h2>
+          <table class="stats-table"><thead>叭<th>Year</th><th>Winner</th><th>Runner-up</th><th>Player of the Match (Final)</th> </thead>
+          <tbody>
+            <tr><td>2021</td><td>Southern Brave</td><td>Birmingham Phoenix</td><td>Paul Stirling (61)</td></tr>
+            <tr><td>2022</td><td>Trent Rockets</td><td>Manchester Originals</td><td>Lewis Gregory (4/35, 16*)</td></tr>
+            <tr><td>2023</td><td>Oval Invincibles</td><td>Manchester Originals</td><td>Adam Zampa (3/22)</td></tr>
+            <tr><td>2024</td><td>Oval Invincibles</td><td>Southern Brave</td><td>Sam Curran (3/16, 15*)</td></tr>
+            <tr><td>2025</td><td>Oval Invincibles</td><td>Trent Rockets</td><td>Jordan Cox (46*, 2 catches)</td></tr>
+          </tbody></table>
+        </div>
+      </div>
+
+      <!-- CPL -->
+      <div class="tab-pane" id="cpl">
+        <div class="tournament-card">
+          <h2>Caribbean Premier League (CPL)</h2>
+          <table class="stats-table"><thead>叭<th>Year</th><th>Winner</th><th>Runner-up</th><th>Player of the Match (Final)</th> </thead>
+          <tbody>
+            <tr><td>2013</td><td>Jamaica Tallawahs</td><td>Guyana Amazon Warriors</td><td>Kris Sling (4/12)</td></tr>
+            <tr><td>2014</td><td>Barbados Tridents</td><td>Guyana Amazon Warriors</td><td>Rayad Emrit (3/31)</td></tr>
+            <tr><td>2015</td><td>Trinbago Knight Riders</td><td>Barbados Tridents</td><td>Dwayne Bravo (3/16, 10*)</td></tr>
+            <tr><td>2016</td><td>Jamaica Tallawahs</td><td>Guyana Amazon Warriors</td><td>Rovman Powell (47)</td></tr>
+            <tr><td>2017</td><td>Trinbago Knight Riders</td><td>St Kitts & Nevis Patriots</td><td>Dwayne Bravo (3/29, 7*)</td></tr>
+            <tr><td>2018</td><td>Trinbago Knight Riders</td><td>Guyana Amazon Warriors</td><td>Colin Munro (68)</td></tr>
+            <tr><td>2019</td><td>Barbados Tridents</td><td>Guyana Amazon Warriors</td><td>Hayden Walsh Jr (3/23)</td></tr>
+            <tr><td>2020</td><td>Trinbago Knight Riders</td><td>St Lucia Zouks</td><td>Kieron Pollard (3/26, 4*)</td></tr>
+            <tr><td>2021</td><td>St Kitts & Nevis Patriots</td><td>Saint Lucia Kings</td><td>Dominic Drakes (48*, 3/26)</td></tr>
+            <tr><td>2022</td><td>Jamaica Tallawahs</td><td>Barbados Royals</td><td>Brandon King (93)</td></tr>
+            <tr><td>2023</td><td>Guyana Amazon Warriors</td><td>Trinbago Knight Riders</td><td>Dwaine Pretorius (3/13, 0)</td></tr>
+            <tr><td>2024</td><td>Guyana Amazon Warriors</td><td>St Kitts & Nevis Patriots</td><td>Moeen Ali (2/21, 15)</td></tr>
+            <tr><td>2025</td><td>Trinbago Knight Riders</td><td>Saint Lucia Kings</td><td>Jason Roy (112*)</td></tr>
+          </tbody></table>
+        </div>
+      </div>
+
+      <!-- SA20 -->
+      <div class="tab-pane" id="sa20">
+        <div class="tournament-card">
+          <h2>SA20</h2>
+          <table class="stats-table"><thead>叭<th>Year</th><th>Winner</th><th>Runner-up</th><th>Player of the Match (Final)</th> </thead>
+          <tbody>
+            <tr><td>2023</td><td>Sunrisers Eastern Cape</td><td>Pretoria Capitals</td><td>Aiden Markram (33*, 1/19)</td></tr>
+            <tr><td>2024</td><td>Sunrisers Eastern Cape</td><td>Durban's Super Giants</td><td>Simon Harmer (3/20)</td></tr>
+            <tr><td>2025</td><td>MI Cape Town</td><td>Sunrisers Eastern Cape</td><td>Ryan Rickelton (98*)</td></tr>
+          </tbody></table>
+        </div>
+      </div>
+
+      <!-- WPL -->
+      <div class="tab-pane" id="wpl">
+        <div class="tournament-card">
+          <h2>Women's Premier League (WPL)</h2>
+          <table class="stats-table"><thead>叭<th>Year</th><th>Winner</th><th>Runner-up</th><th>Player of the Match (Final)</th><th>Player of the Tournament</th> </thead>
+          <tbody>
+            <tr><td>2023</td><td>Mumbai Indians</td><td>Delhi Capitals</td><td>Nat Sciver-Brunt (60*)</td><td>Hayley Matthews</td></tr>
+            <tr><td>2024</td><td>Royal Challengers Bengaluru</td><td>Delhi Capitals</td><td>Sophie Molineux (3/20)</td><td>Deepti Sharma</td></tr>
+            <tr><td>2025</td><td>Mumbai Indians</td><td>Delhi Capitals</td><td>Harmanpreet Kaur (66)</td><td>Nat Sciver-Brunt</td></tr>
+          </tbody></table>
+        </div>
+      </div>
+
+      <!-- MLC -->
+      <div class="tab-pane" id="mlc">
+        <div class="tournament-card">
+          <h2>Major League Cricket (MLC)</h2>
+          <table class="stats-table"><thead>叭<th>Year</th><th>Winner</th><th>Runner-up</th><th>Player of the Match (Final)</th> </thead>
+          <tbody>
+            <tr><td>2023</td><td>MI New York</td><td>Seattle Orcas</td><td>Nicholas Pooran (137*)</td></tr>
+            <tr><td>2024</td><td>Washington Freedom</td><td>San Francisco Unicorns</td><td>Travis Head (52)</td></tr>
+            <tr><td>2025</td><td>Washington Freedom</td><td>Texas Super Kings</td><td>Glenn Maxwell (68*)</td></tr>
+          </tbody></table>
+        </div>
+      </div>
+
+      <!-- BPL -->
+      <div class="tab-pane" id="bpl">
+        <div class="tournament-card">
+          <h2>Bangladesh Premier League (BPL)</h2>
+          <table class="stats-table"><thead>叭<th>Year</th><th>Winner</th><th>Runner-up</th><th>Player of the Match (Final)</th> </thead>
+          <tbody>
+            <tr><td>2012</td><td>Dhaka Gladiators</td><td>Barisal Burners</td><td>Shakib Al Hasan (3/17)</td></tr>
+            <tr><td>2013</td><td>Dhaka Gladiators</td><td>Chittagong Kings</td><td>Mashrafe Mortaza (3/21)</td></tr>
+            <tr><td>2015</td><td>Comilla Victorians</td><td>Barisal Bulls</td><td>Ashar Zaidi (3/23)</td></tr>
+            <tr><td>2016</td><td>Dhaka Dynamites</td><td>Rajshahi Kings</td><td>Kumar Sangakkara (45*)</td></tr>
+            <tr><td>2017</td><td>Dhaka Dynamites</td><td>Comilla Victorians</td><td>Shakib Al Hasan (3/19)</td></tr>
+            <tr><td>2019</td><td>Comilla Victorians</td><td>Dhaka Dynamites</td><td>Tamim Iqbal (62)</td></tr>
+            <tr><td>2022</td><td>Comilla Victorians</td><td>Fortune Barishal</td><td>Andre Russell (3/17, 30*)</td></tr>
+            <tr><td>2023</td><td>Comilla Victorians</td><td>Sylhet Strikers</td><td>Litton Das (45)</td></tr>
+            <tr><td>2024</td><td>Fortune Barishal</td><td>Comilla Victorians</td><td>Kyle Mayers (46*)</td></tr>
+            <tr><td>2025</td><td>Fortune Barishal</td><td>Chittagong Kings</td><td>Tamim Iqbal (56)</td></tr>
+          </tbody></table>
+        </div>
+      </div>
+
+      <!-- ILT20 -->
+      <div class="tab-pane" id="ilt20">
+        <div class="tournament-card">
+          <h2>International League T20 (ILT20)</h2>
+          <table class="stats-table"><thead>叭<th>Year</th><th>Winner</th><th>Runner-up</th><th>Player of the Match (Final)</th> </thead>
+          <tbody>
+            <tr><td>2023</td><td>Gulf Giants</td><td>Desert Vipers</td><td>Chris Lynn (72*)</td></tr>
+            <tr><td>2024</td><td>MI Emirates</td><td>Dubai Capitals</td><td>Waseem Muhammad (48)</td></tr>
+            <tr><td>2025</td><td>Desert Vipers</td><td>Sharjah Warriors</td><td>Alex Hales (87*)</td></tr>
+          </tbody></table>
+        </div>
+      </div>
+
+      <!-- Super Smash -->
+      <div class="tab-pane" id="supersmash">
+        <div class="tournament-card">
+          <h2>Super Smash (New Zealand)</h2>
+          <table class="stats-table"><thead>叭<th>Season</th><th>Winner</th><th>Runner-up</th><th>Player of the Match (Final)</th> </thead>
+          <tbody>
+            <tr><td>2022-23</td><td>Northern Knights</td><td>Wellington Firebirds</td><td>Tim Seifert (66)</td></tr>
+            <tr><td>2023-24</td><td>Auckland Aces</td><td>Canterbury Kings</td><td>Sean Solia (48*, 3/28)</td></tr>
+            <tr><td>2024-25</td><td>Wellington Firebirds</td><td>Central Stags</td><td>Michael Bracewell (54*, 2/23)</td></tr>
+          </tbody></table>
+        </div>
+      </div>
+
+      <!-- County Championship (summary) -->
+      <div class="tab-pane" id="county">
+        <div class="tournament-card">
+          <h2>County Championship (England)</h2>
+          <div class="league-summary">
+            <p>England's premier first-class competition, established in 1890. Played over two divisions (14 teams) since 2000.</p>
+            <p><strong>Recent Division One Winners:</strong></p>
+            <ul>
+              <li>2021: Warwickshire</li>
+              <li>2022: Surrey</li>
+              <li>2023: Surrey</li>
+              <li>2024: Surrey</li>
+              <li>2025: Hampshire</li>
+            </ul>
+            <p><strong>Most Titles:</strong> Yorkshire (33), Surrey (21), Middlesex (13).</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 CricketAtlas — Verified domestic league data.</p>
+  </footer>
+
+  <div id="gameFloatingBtn" class="floating-game-btn"><i class="fas fa-gamepad"></i> <span>Play Cricket Dash</span></div>
+
+  <script>
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const tabId = btn.getAttribute('data-tab');
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
+        btn.classList.add('active');
+        document.getElementById(tabId).classList.add('active');
+      });
+    });
+  </script>
+  <script src="js/darkmode.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/game.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

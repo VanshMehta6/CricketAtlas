@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CricketAtlas · History</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dark-mode.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <header class="sticky-header">
+    <div class="logo"><i class="fas fa-cricket"></i> CricketAtlas</div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="basics.html">Basics</a>
+      <a href="international.html">International</a>
+      <a href="domestic.html">Domestics</a>
+      <a href="match-history.html">Match History</a>
+      <a href="players.html">Players</a>
+      <a href="history.html" class="active">History</a>
+      <a href="records.html">Records</a>
+      <a href="news.html">News</a>
+    </nav>
+    <button class="dark-toggle" id="darkModeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+      <i class="fas fa-moon"></i>
+    </button>
+  </header>
+
+  <main class="main-content">
+    <h1 class="page-title"><i class="fas fa-timeline"></i> Cricket History Timeline</h1>
+    <div class="timeline">
+      <div class="timeline-item left">
+        <div class="timeline-content">
+          <h3>1844</h3>
+          <p>First international cricket match: USA vs Canada.</p>
+        </div>
+      </div>
+      <div class="timeline-item right">
+        <div class="timeline-content">
+          <h3>1877</h3>
+          <p>First Test match: Australia vs England at MCG.</p>
+        </div>
+      </div>
+      <div class="timeline-item left">
+        <div class="timeline-content">
+          <h3>1975</h3>
+          <p>First Cricket World Cup (ODI) held in England.</p>
+        </div>
+      </div>
+      <div class="timeline-item right">
+        <div class="timeline-content">
+          <h3>2005</h3>
+          <p>Ashes series epic: England regains Ashes after 18 years.</p>
+        </div>
+      </div>
+      <div class="timeline-item left">
+        <div class="timeline-content">
+          <h3>2016</h3>
+          <p>Introduction of Day/Night Tests & T20 World Cup expansion.</p>
+        </div>
+      </div>
+      <div class="timeline-item right">
+        <div class="timeline-content">
+          <h3>2023-2026</h3>
+          <p>WPL debut, Cricket returns to Olympics (2028), record-breaking viewership.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 CricketAtlas — The Complete Cricket Encyclopedia. All data up to 2026.</p>
+  </footer>
+
+  <div id="gameFloatingBtn" class="floating-game-btn">
+    <i class="fas fa-gamepad"></i> <span>Play Cricket Dash</span>
+  </div>
+
+  <script src="js/darkmode.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/game.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

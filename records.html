@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CricketAtlas · Records</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dark-mode.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <header class="sticky-header">
+    <div class="logo"><i class="fas fa-cricket"></i> CricketAtlas</div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="basics.html">Basics</a>
+      <a href="international.html">International</a>
+      <a href="domestic.html">Domestics</a>
+      <a href="match-history.html">Match History</a>
+      <a href="players.html">Players</a>
+      <a href="history.html">History</a>
+      <a href="records.html" class="active">Records</a>
+      <a href="news.html">News</a>
+    </nav>
+    <button class="dark-toggle" id="darkModeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+      <i class="fas fa-moon"></i>
+    </button>
+  </header>
+
+  <main class="main-content">
+    <h1 class="page-title"><i class="fas fa-chart-line"></i> Cricket Records (2026 Update)</h1>
+
+    <div class="record-category">
+      <h2>Batting</h2>
+      <table class="stats-table">
+        <tr><th>Most Test Runs</th><td>Sachin Tendulkar (15,921)</td></tr>
+        <tr><th>Most ODI Runs</th><td>Sachin Tendulkar (18,426)</td></tr>
+        <tr><th>Most T20I Runs</th><td>Virat Kohli (4,188)</td></tr>
+        <tr><th>Highest Individual Score (Tests)</th><td>Brian Lara (400*)</td></tr>
+        <tr><th>Fastest Century (ODI)</th><td>AB de Villiers (31 balls)</td></tr>
+      </table>
+    </div>
+
+    <div class="record-category">
+      <h2>Bowling</h2>
+      <table class="stats-table">
+        <tr><th>Most Test Wickets</th><td>Muttiah Muralitharan (800)</td></tr>
+        <tr><th>Most ODI Wickets</th><td>Muttiah Muralitharan (534)</td></tr>
+        <tr><th>Best Bowling Figures (Tests)</th><td>Jim Laker (10/53)</td></tr>
+        <tr><th>Most T20I Wickets</th><td>Rashid Khan (150+)</td></tr>
+      </table>
+    </div>
+
+    <div class="record-category">
+      <h2>Team & Milestones</h2>
+      <ul>
+        <li>Highest ODI Total: England 498/4 (2022)</li>
+        <li>Highest T20I Total: Nepal 314/3 (2024)</li>
+        <li>Most World Cup Wins: Australia (ODI: 6, T20: 2)</li>
+        <li>Most Consecutive Test Wins: Australia (16, 1999-2001)</li>
+      </ul>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 CricketAtlas — The Complete Cricket Encyclopedia. All data up to 2026.</p>
+  </footer>
+
+  <div id="gameFloatingBtn" class="floating-game-btn">
+    <i class="fas fa-gamepad"></i> <span>Play Cricket Dash</span>
+  </div>
+
+  <script src="js/darkmode.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/game.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
